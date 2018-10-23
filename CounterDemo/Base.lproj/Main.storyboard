@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Counter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="CounterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp0-vR-7W6">
+                                <rect key="frame" x="30" y="100" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="M5q-qN-bdP"/>
+                                    <constraint firstAttribute="width" constant="60" id="vtA-57-H37"/>
+                                </constraints>
+                                <state key="normal" image="MinusIcon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaF-Fo-lMW">
+                                <rect key="frame" x="285" y="100" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="HPU-qQ-lg8"/>
+                                    <constraint firstAttribute="width" constant="60" id="NKD-M1-87u"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="b4w-Cn-FZE"/>
+                                    <constraint firstAttribute="height" constant="60" id="yyu-Vd-uEc"/>
+                                </constraints>
+                                <state key="normal" image="PlusIcon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDx-Y8-lbc">
+                                <rect key="frame" x="179" y="317.5" width="18" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pp0-vR-7W6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Gl7-VE-ZO0"/>
+                            <constraint firstItem="vDx-Y8-lbc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H06-at-uv7"/>
+                            <constraint firstItem="AaF-Fo-lMW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="HvE-Yp-JRE"/>
+                            <constraint firstItem="Pp0-vR-7W6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="RKp-Qu-tuu"/>
+                            <constraint firstItem="vDx-Y8-lbc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g1j-F0-dLj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AaF-Fo-lMW" secondAttribute="trailing" constant="30" id="jQ9-gp-b6U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="AaF-Fo-lMW" id="faS-R5-Hsw"/>
+                        <outlet property="counterLabel" destination="vDx-Y8-lbc" id="IxX-BN-TJY"/>
+                        <outlet property="minusButton" destination="Pp0-vR-7W6" id="i6k-SW-1ga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MinusIcon" width="60" height="60"/>
+        <image name="PlusIcon" width="60" height="60"/>
+    </resources>
+</document>
